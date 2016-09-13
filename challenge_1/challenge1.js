@@ -10,12 +10,16 @@
 var saveButton = $('#save-button');
 var loadButton = $('#load-button');
 
+
+
+
 /**
  * Gets the text from the element for you
  * @return {String}
  */
 function getText() {
   return $('#save-me').val();
+
 }
 
 /**
@@ -25,3 +29,17 @@ function getText() {
 function setText(text) {
   return $('#save-me').val(text);
 }
+
+
+$('#save-button').on('click', function() {
+	localStorage.setItem('enteredText', getText());
+	setText('');
+})
+
+$('#load-button').on('click', function() {
+	setText(localStorage.getItem('enteredText'));
+})
+
+
+
+
