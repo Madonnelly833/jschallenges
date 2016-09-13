@@ -15,7 +15,7 @@ $(function(){
           
           color: "#aa0000",
           
-        } );
+        });
       }
       state = !state;
     });
